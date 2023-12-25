@@ -131,7 +131,7 @@ function signupNewUser() {
 }
 
 // Input Validation Regex
-var nameRegex = /^[a-z0-9]{3,}$/;
+var nameRegex = /^[a-z0-9]{3,}$/i;
 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validateName(name) {
