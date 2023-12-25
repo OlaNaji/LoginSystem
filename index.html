@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/af60ee0f55.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>Login</title>
+</head>
+<body>
+
+  <main class="main-page d-flex justify-content-center align-items-center ">
+    <div class="login-card container w-50">
+      <section id="signup-section" class="w-100">
+        <label class="signupLabel" for="signupUsername">sign up</label>
+        <input type="text" placeholder="Username" id="signupUsername" class="form-control w-75 my-4 ">
+        <input  type="email" placeholder="E-mail" id="signupEmail" class="form-control w-75 mb-4 ">
+        <input type="password" placeholder="Password" id="signupPassword" class="form-control w-75 mb-4 ">
+  
+        <!-- validating password -->
+        <div id="passwordConditions">
+          <p id="uppercaseCondition" class="invalid">Must contain an uppercase letter</p>
+          <p id="specialCharCondition" class="invalid">Must contain a special character</p>
+          <p id="lengthCondition" class="invalid">Must be at least 8 characters long</p>
+          <p id="numberCondition" class="invalid">Must contain a number</p>
+        </div>
+        <!--  -->
+        <a class="btn btn-signup w-50">sign up</a>
+        <p class="login-paragraph mt-2">already have an account ? <a>log in</a></p>
+
+        <p class="signup-message"></p>
+      </section>
+    
+    
+      <section id="login-section" class="w-100 ">
+        <label class="loginLabel">log in</label>
+        <input type="email" placeholder="E-mail" id="loginEmail" class="form-control w-75 my-4 ">
+        <input type="password" placeholder="Password" id="loginPassword" class="form-control w-75 mb-4 ">
+  
+        <a class="btn btn-signup login-btn w-25">log in</a>
+        <p class="signup-paragraph mt-2 ">don't have an account? <a>sign up</a> </p>
+        <p class="login-message"></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

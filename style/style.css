@@ -1,0 +1,188 @@
+/* Reset styles for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Define color variables for easy customization */
+:root {
+    --main-dark: #092635;
+    --main-md: #1B4242;
+    --main-regular: #5C8374;
+    --main-light: #9EC8B9;
+    --white: #fff;
+    --main-grey: #EEEEEE;
+}
+
+/* Font definitions for special fonts used in the project */
+@font-face {
+    font-family: 'pacifico';
+    src: url(../font/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'righteous';
+    src: url(../font/Righteous-Regular.ttf);
+}
+
+/* Base styles for the entire page */
+.main-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--main-dark), var(--main-md), var(--main-dark));
+}
+
+/* Styling for the main login card */
+.login-card {
+    background-color: var(--main-dark);
+    padding: 1rem 0.5rem 4rem 0.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 10px 40px #000;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Styles for labels used in signup and login sections */
+#signup-section label,
+#login-section label {
+    color: var(--white);
+    font-family: righteous;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Styles for signup and login sections */
+#login-section,
+#signup-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+/* Styles for form controls (input elements) */
+.form-control {
+    background-color: var(--main-grey);
+}
+.form-control:focus {
+    border: none;
+    box-shadow: 0 0 0 0.2rem #5C8374;
+}
+.login-paragraph {
+    color: var(--main-grey);
+}
+
+.login-paragraph a,
+.signup-paragraph a {
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+/* Styles for the signup button */
+.btn-signup {
+    background-color: var(--main-regular);
+    color: var(--white);
+    font-family: righteous;
+    font-size: 1.1rem;
+    transition: all 0.4s;
+}
+.btn-signup:hover {
+    color: var(--white);
+    background-color: #4c695e;
+}
+
+
+/* Styles for the login section */
+#login-section {
+    background-color: var(--main-grey);
+    border-radius: 60% / 25%;
+    top: 85%;
+    left: 0;
+    height: 110%;
+    position: absolute;
+    justify-content: start;
+    padding-top: 0.5rem;
+}
+
+#login-section label {
+    color: var(--main-regular);
+    font-size: 2rem;
+}
+#login-section .form-control {
+    background-color: #E0DEDE;
+}
+
+/* Styles for password conditions */
+#passwordConditions {
+    display: none;
+    margin-right: auto;
+    transform: translateX(50%);
+}
+#passwordConditions p {
+    color: red;
+    font-size: 0.8rem;
+}
+.invalid {
+    color: red;
+}
+.valid {
+    color: green;
+}
+
+/* Display password conditions when the signup password field is focused */
+#signupPassword:focus ~ #passwordConditions {
+    display: block;
+}
+
+/* Hide signup messages */
+#signupUsername:focus ~ .signup-message,
+#signupEmail:focus ~ .signup-message,
+#signupPassword:focus ~ .signup-message {
+    display: none;
+}
+
+.signup-message {
+    color: var(--main-light);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Styles for the navigation bar */
+.navbar {
+    background-color: var(--main-md);
+    padding: 1rem 3rem;
+}
+
+.navbar-brand {
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: righteous;
+    font-size: 1.5rem;
+}
+
+.nav-item .nav-link {
+    color: var(--main-grey) !important;
+    font-family: righteous;
+    font-size: 1.1rem;
+    border: var(--main-grey) 2px solid;
+}
+
+/* Styles for the displayed username */
+#usernameDisplay {
+    margin-top: 10%;
+    color: var(--main-light);
+}
+
+/* Responsive styles for screens with a width of 768px or less */
+@media only screen and (max-width: 768px) {
+    .login-card {
+        width: 75% !important;
+    }
+
+    #passwordConditions {
+        margin-right: 0;
+        transform: translateX(0);
+    }
+}
