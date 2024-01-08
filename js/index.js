@@ -24,9 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
     displayWelcomeMessage();
     
     // Logout event listener
+    if(logoutBtn){
     logoutBtn.addEventListener('click', function () {
         logOut();
-    });
+    });}
 });
 
 // Sign-up event listeners
@@ -131,7 +132,7 @@ function signupNewUser() {
 }
 
 // Input Validation Regex
-var nameRegex = /^[a-zA-Z0-9]{3,}$/;
+var nameRegex = /^[a-z0-9]{3,}$/;
 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validateName(name) {
