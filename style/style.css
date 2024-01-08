@@ -177,15 +177,19 @@
 
 /* Responsive styles for screens with a width of 768px or less */
 @media only screen and (max-width: 768px) {
+    
+
+    #passwordConditions {
+        margin-right: 0;
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: 576px){
     html{
         font-size: 8px;
     }
     .login-card {
         width: 80% !important;
-    }
-
-    #passwordConditions {
-        margin-right: 0;
-        transform: translateX(0);
     }
 }
