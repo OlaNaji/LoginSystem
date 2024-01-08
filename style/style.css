@@ -186,10 +186,13 @@
 }
 
 @media only screen and (max-width: 576px){
+    
+@media only screen and (max-width: 576px){
     html{
-        font-size: 8px;
+        font-size: 12px;
     }
     .login-card {
-        width: 80% !important;
+        width: 75% !important;
     }
+}
 }
